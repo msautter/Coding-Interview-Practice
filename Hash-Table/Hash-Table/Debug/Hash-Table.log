@@ -1,5 +1,4 @@
 ﻿  hash.cpp
-c:\users\marek\desktop\coding-interview-practice\hash-table\hash-table\hash.cpp(79): warning C4018: '<': signed/unsigned mismatch
-  main.cpp
-  Generating Code...
+c:\users\marek\desktop\coding-interview-practice\hash-table\hash-table\hash.cpp(59): warning C4018: '<': signed/unsigned mismatch
+c:\users\marek\desktop\coding-interview-practice\hash-table\hash-table\hash.cpp(70): warning C4018: '<': signed/unsigned mismatch
   Hash-Table.vcxproj -> C:\Users\marek\Desktop\Coding-Interview-Practice\Hash-Table\Debug\Hash-Table.exe

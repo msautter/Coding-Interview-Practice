@@ -1,8 +1,6 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-
-
 using namespace std;
 
 #ifndef HASH_H
@@ -11,33 +9,46 @@ using namespace std;
 class HashClass 
 {
 private:
-	const string emptyName = "[EMPTY]";
-	//Setting the arraySize to be 10
-	static const int tableSize = 100;
-
 	//Creating a hashNode that holds elements
 	struct HashNode {
 		string name;
 		int value;
+		int sum;
 		HashNode * next;
 	};
 
+	//Array of HashNodes
+	static const int tableSize = 10;
 	HashNode* HashTable[tableSize];
+	const string emptyName = "[EMPTY]";
+
 public:
-	//hashClass constructor
+	//Default Constructor
 	HashClass();
 
+	//Destructor 
+	~HashClass();
+
 	//Take string (key) and evaluate it into an int (index)
-	int Hash(string key);
+	int HashFunction(string key);
 
 	//Take the name and number and add it to the hashTable
-	void AddItem(string name, int value);
+	void AddNode(string name, int value);
 
 	//Take the index and find how many items are at that index
-	int GetNumItems(int index);
+	int GetNumNodes(int index);
 
-	//Print all elements at an index
-	void PrintItems();
+	//Print all the first items
+	void PrintNodes();
+
+	//Print all collisions at an index
+	void PrintNodes(int index);
+
+	//Return the value of a string
+	int GetValue(string key);
+
+	//Remove an entry from the hash table
+	void RemoveNode(string key);
 };
 
 #endif // !HASH_H
