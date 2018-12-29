@@ -9,17 +9,17 @@ using namespace std;
 class HashClass 
 {
 private:
-	//Creating a hashNode that holds elements
-	struct HashNode {
+	//Creating a node that holds elements
+	struct node {
 		string name;
 		int value;
 		int sum;
-		HashNode * next;
+		node * next;
 	};
 
-	//Array of HashNodes
+	//Array of nodes
 	static const int tableSize = 10;
-	HashNode* HashTable[tableSize];
+	node* HashTable[tableSize];
 	const string emptyName = "[EMPTY]";
 
 public:

@@ -10,7 +10,7 @@ HashClass::HashClass()
 {
 	for (int i = 0; i < tableSize; i++)
 	{
-		HashTable[i] = new HashNode;
+		HashTable[i] = new node;
 		HashTable[i]->name = emptyName;
 		HashTable[i]->value = 0;
 		HashTable[i]->sum = 0;
@@ -20,7 +20,7 @@ HashClass::HashClass()
 
 HashClass::~HashClass()
 {
-	HashNode* delNode;
+	node* delNode;
 	for (int i = 0; i < tableSize; i++)
 	{
 		while (HashTable[i] != NULL)
@@ -39,7 +39,7 @@ int HashClass::GetValue(string key)
 {
 	int index = HashFunction(key);
 	int numNodes = GetNumNodes(index);
-	HashNode * tempNode = HashTable[index];
+	node * tempNode = HashTable[index];
 	while (tempNode != NULL)
 	{
 		if (tempNode->name == key)
@@ -81,13 +81,13 @@ void HashClass::AddNode(string key, int value)
 	}
 	else
 	{
-		HashNode * newNode = new HashNode;
+		node * newNode = new node;
 		newNode->name = key;
 		newNode->value = value;
 		newNode->sum = sum;
 		newNode->next = NULL;
 
-		HashNode * tempNode = HashTable[index];
+		node * tempNode = HashTable[index];
 		while (tempNode->next != NULL) 
 		{ 
 			tempNode = tempNode->next; 
@@ -107,7 +107,7 @@ int HashClass::GetNumNodes(int index)
 	else
 	{
 		count++;
-		HashNode * tempNode = HashTable[index];
+		node * tempNode = HashTable[index];
 		while (tempNode->next != NULL) 
 		{ 
 			count++;
@@ -133,7 +133,7 @@ void HashClass::PrintNodes()
 			cout << "[" << setw(2) << i << "] (" << numNodes << ") : | {N: " << HashTable[i]->name << ", V: " << HashTable[i]->value << ", S: " << HashTable[i]->sum << "} ";
 			if (HashTable[i]->next != NULL)
 			{
-				HashNode * tempNode = HashTable[i]->next;
+				node * tempNode = HashTable[i]->next;
 				while (tempNode != NULL)
 				{
 					cout << "{N: " << tempNode->name << ", V: " << tempNode->value << ", S: " << tempNode->sum << "} ";
@@ -159,7 +159,7 @@ void HashClass::PrintNodes(int index)
 		cout << "[" << setw(2) << index << "] (" << numNodes << ") : | {N: " << HashTable[index]->name << ", V: " << HashTable[index]->value << "} ";
 		if (HashTable[index]->next != NULL)
 		{
-			HashNode * tempNode = HashTable[index]->next;
+			node * tempNode = HashTable[index]->next;
 			while (tempNode != NULL)
 			{
 				cout << "{N: " << tempNode->name << ", V: " << tempNode->value << "} ";
@@ -194,7 +194,7 @@ void HashClass::RemoveNode(string key)
 		// If the first is the node in a list of nodes
 		if (HashTable[index]->name == key)
 		{
-			HashNode * delNode = HashTable[index];
+			node * delNode = HashTable[index];
 			HashTable[index] = HashTable[index]->next;
 			delete delNode;
 			cout << "[" << setw(2) << index << "] (" << numNodes << ") : | SUCCESS - \"" << key << "\" WAS REMOVED" << endl;
@@ -202,23 +202,23 @@ void HashClass::RemoveNode(string key)
 		// If the node is after the first
 		else
 		{
-			HashNode * tempNode1 = HashTable[index];
-			HashNode * tempNode2 = HashTable[index]->next;
+			node * tempPtr1 = HashTable[index];
+			node * tempPtr2 = HashTable[index]->next;
 
-			while (tempNode2 != NULL && tempNode2->name != key)
+			while (tempPtr2 != NULL && tempPtr2->name != key)
 			{
-				tempNode1 = tempNode2;
-				tempNode2 = tempNode2->next;
+				tempPtr1 = tempPtr2;
+				tempPtr2 = tempPtr2->next;
 			}
-			if (tempNode2 == NULL)
+			if (tempPtr2 == NULL)
 			{
 				cout << "[" << setw(2) << index << "] (" << numNodes << ") : | ERROR - \"" << key << "\" NOT FOUND" << endl;
 			}
 			else
 			{
-				HashNode * delNode = tempNode2;
-				tempNode2 = tempNode2->next;
-				tempNode1->next = tempNode2;
+				node * delNode = tempPtr2;
+				tempPtr2 = tempPtr2->next;
+				tempPtr1->next = tempPtr2;
 				delete delNode;
 				cout << "[" << setw(2) << index << "] (" << numNodes << ") : | SUCCESS - \"" << key << "\" WAS REMOVED" << endl;
 			}
