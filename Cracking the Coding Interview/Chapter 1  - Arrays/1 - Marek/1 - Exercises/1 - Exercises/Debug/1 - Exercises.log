@@ -1,3 +1,6 @@
 ﻿  main.cpp
-c:\users\zz-msautter\desktop\github\coding-interview-practice\cracking the coding interview\chapter 1  - arrays\1 - marek\1 - exercises\1 - exercises\ex 1.1.h(27): warning C4018: '<': signed/unsigned mismatch
+c:\users\zz-msautter\desktop\github\coding-interview-practice\cracking the coding interview\chapter 1  - arrays\1 - marek\1 - exercises\1 - exercises\ex 1.1.h(25): warning C4018: '<': signed/unsigned mismatch
+c:\users\zz-msautter\desktop\github\coding-interview-practice\cracking the coding interview\chapter 1  - arrays\1 - marek\1 - exercises\1 - exercises\ex 1.2.h(13): warning C4018: '<': signed/unsigned mismatch
+c:\users\zz-msautter\desktop\github\coding-interview-practice\cracking the coding interview\chapter 1  - arrays\1 - marek\1 - exercises\1 - exercises\ex 1.2.h(40): warning C4018: '<': signed/unsigned mismatch
+c:\users\zz-msautter\desktop\github\coding-interview-practice\cracking the coding interview\chapter 1  - arrays\1 - marek\1 - exercises\1 - exercises\ex 1.2.h(59): warning C4018: '<': signed/unsigned mismatch
   1 - Exercises.vcxproj -> C:\Users\zz-msautter\Desktop\Github\Coding-Interview-Practice\Cracking the Coding Interview\Chapter 1  - Arrays\1 - Marek\1 - Exercises\Debug\1 - Exercises.exe

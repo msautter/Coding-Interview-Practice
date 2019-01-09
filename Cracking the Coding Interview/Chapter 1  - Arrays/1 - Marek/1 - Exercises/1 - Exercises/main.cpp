@@ -15,6 +15,15 @@ using namespace std;
 
 int main()
 {
+	cout << "Q 1.1: Implement an algorithm to determine if a string has all unique characters" << endl;
+	cout << "Is the string \"Hello\" unique?: " << isUnique("Hello") << endl;
+	cout << "Is the string \"World\" unique?: " << isUnique("World") << endl;
+	cout << endl;
+
+	cout << "Q 1.2: Given two string, write a method to decide if one is a permutation of the other" << endl;
+	cout << "Is \"taco\" a permutation of \"cato\"?: " << checkPermutation("taco", "cato") << endl;
+	cout << "Is \"hello\" a permutation of \"world\"?: " << checkPermutation("hello", "world") << endl;
+	cout << endl;
 
 	system("PAUSE");
 	return 0;
