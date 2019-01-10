@@ -25,6 +25,16 @@ int main()
 	cout << "Is \"hello\" a permutation of \"world\"?: " << checkPermutation("hello", "world") << endl;
 	cout << endl;
 
+	cout << "Q 1.3: Given a string, replace all spaces with %20" << endl;
+	cout << "Input: Hello World, I am Ready! Output: ";
+	char charArray[] = "Hello World, I am Ready!";
+	cout << endl;
+
+	cout << sizeof(charArray) << endl;
+	urlifyNewString(charArray);
+	
+	cout << endl;
+
 	system("PAUSE");
 	return 0;
 }
