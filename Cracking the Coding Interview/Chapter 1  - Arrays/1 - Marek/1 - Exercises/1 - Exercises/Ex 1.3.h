@@ -1,5 +1,7 @@
 #pragma once
 
+//Q1.3 Write a method to replace all spaces in a string with %20
+
 //A simple solution would be to create a second string and copy characters in one by one. Whenever a space is encountered replace it with %20
 
 void urlifyNewString(char * oldString)
