@@ -28,13 +28,13 @@ int main()
 	cout << "Q 1.3: Given a string, replace all spaces with %20" << endl;
 	cout << "Input: Hello World, I am Ready! Output: ";
 	char charArray[] = "Hello World, I am Ready!";
-	cout << endl;
-
-	cout << sizeof(charArray) << endl;
 	urlifyNewString(charArray);
-	
 	cout << endl;
 
+	cout << "Q 1.4: Determine if a string is a permutation of a palindrome" << endl;
+	cout << "Is the string \"tacocat\" a permutation of a palindrome?: " << palPerm("tacocat") << endl;
+	cout << "Is the string \"marek\" a permutation of a palindrome?: " << palPerm("marek") << endl;
+	cout << endl;
 	system("PAUSE");
 	return 0;
 }

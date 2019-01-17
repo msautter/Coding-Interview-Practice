@@ -40,12 +40,9 @@ void urlifyNewString(char * oldString)
 		j++;
 	}
 	cout << newString;
+	cout << endl;
 }
 
-void urlifyInPlace(char * oldString)
-{
-
-}
 
 
 //Additonal information: https://www.geeksforgeeks.org/urlify-given-string-replace-spaces/
